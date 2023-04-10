@@ -25,7 +25,7 @@ class PromptMod(loader.Module):
             await utils.answer(message, "No OpenAI API key found. Please set one with .setaikey <key>.")
             return
 
-        await utils.answer(message, "Жди, я думаю")
+        await utils.answer(message, "Тупое ебланище, жди, я думаю")
 
         openai.api_key = api_key
 
@@ -43,7 +43,7 @@ class PromptMod(loader.Module):
                 messages=[
                 	{"role": "user", "content": content},
                 ]
-            
+            )
 
         await utils.answer(message, completion.choices[0].message.content)
 
